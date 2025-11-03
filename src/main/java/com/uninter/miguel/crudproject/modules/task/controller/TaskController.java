@@ -16,7 +16,7 @@ public class TaskController {
     private TaskUseCase useCase;
 
     @PostMapping("/")
-    public ResponseEntity<Task> createTask(@RequestBody Task task){
+    public ResponseEntity<Task> createTask(@RequestBody taskdto task){
         Task newTask= useCase.createTask(task);
         return ResponseEntity.ok(newTask);
     }
